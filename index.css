@@ -27,7 +27,7 @@
     font-family: 'CustomFont';
     flex: 100%;
     width: 100%vh;
-    max-height: 60%vh;
+    max-height: 50%vh;
   }
   .navbar img{
     transform: scale(1.45);
@@ -82,9 +82,7 @@
     justify-content: space-around;
     padding-top: 40px;
   }
-  .menubar-item{
-    color: white;
-  }
+
   .tourbar{
     display: flex;
     flex-direction: column;
@@ -141,10 +139,7 @@
     text-decoration: none;
     font-weight: bolder;
   }
-  .menubar-item a:hover{
-    transform: scale(1.05);
-    cursor:pointer;
-  }
+
   .tick a{
     font-size: 40px;
   }
@@ -260,12 +255,14 @@
     flex-direction: row;
     width: 100%;
     font-family: "CustomFont2";
+    padding: 20px;
+    gap: 40px;
   }
   .menubar a{
-    display: inline-block; /* This will remove any extra space around the image */
-    padding: 0;             /* Remove any padding */
+    display: inline-block; /* This will remove any extra space around the image */    /* Remove any padding */
     margin: 0; 
-    cursor:default;
+    border: solid;
+    z-index: 900;
   }
   .menubar a img{
     display: block; /* Removes space below the image */
