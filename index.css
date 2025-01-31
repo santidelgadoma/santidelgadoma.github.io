@@ -261,7 +261,6 @@
   .menubar a{
     display: inline-block; /* This will remove any extra space around the image */    /* Remove any padding */
     margin: 0; 
-    border: solid;
     z-index: 900;
   }
   .menubar a img{
