@@ -12,26 +12,8 @@
     padding: 0;
     box-sizing: border-box;
   }
-  body{
-    background-image: url("LARGOFONDO.jpg");
-    overflow: scroll !important;
-  }
-  .index{
-    display: flex;
-    flex-direction: column;
-    height: 100%vh;
-    width: 100%vh;
-  }
-  .navbar{
-    align-self: center;
-    font-family: 'CustomFont';
-    flex: 100%;
-    width: 100%vh;
-    max-height: 50%vh;
-  }
-  .navbar img{
-    transform: scale(1.45);
-  }
+
+  
   .tour{
     display: flex;
     align-items: center;
@@ -76,12 +58,7 @@
     letter-spacing: 10px;
     padding-bottom: 150px;
   }
-  .menubar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 40px;
-  }
+
 
   .tourbar{
     display: flex;
@@ -123,9 +100,6 @@
         transform: rotate(310deg); /* Complete one full rotation */
     }
     }
-  .logo{
-    width: 600px;
-  }
 
   .index a{
     color: rgb(0, 0, 0);
@@ -147,16 +121,7 @@
       cursor:pointer;
       transform: scale(1.3);
       }
-    .muñe{
-    position: absolute;
-    top: -450px; /* Initially off the screen */
-    left: 33%;        /* Moves the left edge of the element to the center of the parent */
-    transform: translateX(-50%);
-    transform: rotate(180deg);
-    width: 500px; /* Adjust the size as needed */
-    height: auto;
-    animation: slideInOut 1s steps(3) infinite;
-    }
+    
     .home{
       position: absolute;
       top: -80px;
@@ -190,13 +155,15 @@
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
       z-index: 1000;
+      justify-content: center; /* Center modal horizontally */
+      align-items: center; /* Center modal vertically */
     }
   
   /* Popup content styles */
   .popup-content {
-    position: absolute;
-    left: 35%;
-    top: 25%;
+    position: relative;
+    width: 80%;  /* Default width relative to screen size */
+    max-width: 400px; /* Max width for larger screens */
     border-radius: 5px;
     display: flex;
     justify-content: center;  /* Center text horizontally */
@@ -204,21 +171,22 @@
 
   }
   .popup-content img{
-    transform: scale(1.6);
+    width: 100%; /* Ensure the image scales to fit the container */
+    max-width: 300px; /* Optional: Set a maximum size for the image */
+    height: auto; /* Maintain aspect ratio */
   }
   
   /* Close button styles */
   #closePopupBtn {
-      position: absolute !important;
-      top: -80px;
-      left: -250px;
+      position: absolute ;
+      top: 10px;
+      left: 10px;
       cursor: pointer;
       font-family: "CustomFont2";
       border: none;
       background-color: inherit;
-      width: 200px;
-      height: 50px;
-      font-size: 40px;
+      padding: 12px 24px;
+      font-size: 2rem;
   }
   #closePopupBtn:hover{
     transform: scale(1.6);
@@ -250,28 +218,6 @@
     cursor: pointer;
   }
 
-  .menubar{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    font-family: "CustomFont2";
-    padding: 20px;
-    gap: 40px;
-  }
-  .menubar a{
-    display: inline-block; /* This will remove any extra space around the image */    /* Remove any padding */
-    margin: 0; 
-    z-index: 900;
-  }
-  .menubar a img{
-    display: block; /* Removes space below the image */
-    width: 100%;
-    height: auto;
-  }
-  .menubar a img:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-  }
   .social-buttons {
     display: flex;
     gap: 20px; /* Space between buttons */
@@ -307,3 +253,43 @@
     font-size: 20px;
     padding-bottom: 50px;
   }
+
+/* index.html */
+.index{
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  width: 100%;
+  background-image: url("LARGOFONDO.jpg");
+}
+.muñe{
+  position: absolute;
+  top: -45%; /* Initially off the screen */      /* Moves the left edge of the element to the center of the parent */
+  transform: translateX(-55%) rotate(180deg);
+  width: 80%;
+  width: 400px; /* Adjust the size as needed */
+  height: auto;
+  animation: slideInOut 1s steps(3) infinite;
+}
+.navbar{
+  align-self: center;
+  font-family: 'CustomFont';
+  width: 100%;
+  height: 60%;
+}
+.logo{
+  width: 90%;
+}
+.menubar{
+  display: flex;
+  flex-direction: column;
+}
+.menubar a img{
+  display: block; /* Removes space below the image */
+  width: 70%;
+  height: auto;
+}
+.menubar a img:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
