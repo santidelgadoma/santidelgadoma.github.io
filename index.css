@@ -259,11 +259,12 @@ body{
 }
 
 .merchbar{
-  display: block;
-  grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+  display: flex;
+  flex-direction: column;
   gap: 20px; /* Adds space between the grid items */
   padding: 5%;
   align-items: center;
+  justify-content: center;
 }
 
 .cont-bar{
