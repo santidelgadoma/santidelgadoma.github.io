@@ -26,25 +26,6 @@
     width: 100%vh;
     overflow: hidden;
   }
-  .merch{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 100%vh;
-    width: 100%vh;
-    overflow: hidden;
-    border: solid;
-  }
-  .merchbar{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    justify-items: center;
-    gap: 16px;
-    padding-top: 250px;
-    padding-bottom: 50px;
-    width: 100%;
-  }
-
   .optbar{
     padding-top: 250px;
     font-weight: lighter;
@@ -118,13 +99,6 @@
   transform: scale(1.3);
   }
 
-.home{
-  position: absolute;
-  top: -80px;
-  left: 20px;
-  max-width: 200px;
-  max-height: 200px;
-}
 @keyframes slideInOut {
     0% {
         transform:scale(1.03);
@@ -183,33 +157,6 @@
 #closePopupBtn:hover{
   transform: scale(1.6);
 }
-
-  .topbar{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    font-family: "CustomFont2";
-    z-index: 1000;
-  }
-  .topbar a{
-    display: inline-block; /* This will remove any extra space around the image */
-    padding: 0;             /* Remove any padding */
-    margin: 0; 
-    cursor:default;
-    max-height: 200px;
-    padding-top: 300px;
-    padding-right: 100px;
-  }
-  .topbar a img{
-    display: block; /* Removes space below the image */
-    width: 100%;
-    height: auto;
-  }
-  .topbar a img:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-  }
-
   .social-buttons {
     display: flex;
     gap: 20px; /* Space between buttons */
@@ -253,8 +200,6 @@
   flex-direction: column;
   height:100% ;
   width: 100% ;
-  background-image: url("LARGOFONDO.jpg");
-  border: solid;
 }
 .navbar{
   display: flex;
@@ -266,12 +211,12 @@
   width: 100%;
   height: 100%;
 }
-.logo{
+.logo_home{
   position: absolute;
   width: 40%;
   top: -15%;
 }
-.muñe{
+.muñe_home{
   position: absolute;
   top: -15%;
   width: 80%;
@@ -281,6 +226,7 @@
 .menubar{
   display: flex;
   flex-direction: row;
+  z-index: 1000;
 }
 
 @media (max-width:500px){
@@ -288,15 +234,16 @@
     display: flex;
     flex-direction: column;
   }
-  .muñe{
+
+  .muñe_home{
     top: 17%;
   }
-  .logo{
+  .logo_home{
     top: 70%;
     width: 80%;
   }
+  
 }
-
 .menubar a img{
   display: block; /* Removes space below the image */
   width: 70%;
@@ -305,4 +252,22 @@
 .menubar a img:hover{
   transform: scale(1.05);
   cursor: pointer;
+}
+
+body{
+  background-image: url("LARGOFONDO.jpg");
+}
+
+.merchbar{
+  display: block;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+  gap: 20px; /* Adds space between the grid items */
+  padding: 5%;
+  align-items: center;
+}
+
+.cont-bar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
