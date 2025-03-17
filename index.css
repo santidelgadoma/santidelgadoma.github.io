@@ -201,7 +201,7 @@
   top: 0%;
   width: 80%;
   max-width: 80%;
-  height: auto;
+  height: 80%;
   align-self: center;
 }
 .logo_tour{
@@ -212,7 +212,6 @@
 }
 .muñe_home{
   position: absolute;
-  top: 0%;
   width: 40%;
   animation: slideInOut 1s steps(3) infinite;
 }
@@ -234,11 +233,14 @@
     flex-direction: column;
   }
   .muñe_home{
-    top: 26%;
     width: 80%;
+    height: auto;
+    bottom: 10%;
   }
   .logo_home{
-    top: 70%;
+    max-width: 80%;
+    height: auto;
+    bottom: -30%;
   }
   .tourbar-item{
     font-size: 20px;
