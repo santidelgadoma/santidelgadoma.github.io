@@ -14,9 +14,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 100%vh;
-    width: 100%vh;
-    overflow: hidden;
+    height: 100%;
+    width: 100%;
   }
   .musica{
     display: flex;
@@ -35,28 +34,26 @@
     letter-spacing: 10px;
     padding-bottom: 150px;
   }
-
-
   .tourbar{
     display: flex;
-    flex-direction: column;
-    width: 90%;  /* Adjust the width of the grid container */
+    flex-direction: row;
+    max-width: 100%;  /* Adjust the width of the grid container */
     height: 50%;
-    padding-top: 250px;
-    padding-bottom: 50px;
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
   .tourbar-item {
+    max-width: 100%;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
     text-align: center;
-    font-size: 40px;
+    font-size: 39px;
     transition: transform 0.3s ease;
     font-family: "CustomFont2";
-    gap: 5px;
 }
+
 .musicabar{
   display: flex;
   flex-direction: column;
@@ -191,7 +188,6 @@
 }
 .navbar{
   display: flex;
-  position: relative;
   flex-direction: column;
   align-items: center;
   align-self: center;
@@ -201,11 +197,17 @@
   height: 100%;
 }
 .logo_home{
-  position: fixed;
-  top:-45%;
+  position:absolute;
+  top: 0%;
   width: 80%;
   max-width: 80%;
   height: auto;
+  align-self: center;
+}
+.logo_tour{
+  width: 80%;
+  max-width: 80%;
+  height: 50%;
   align-self: center;
 }
 .muñe_home{
@@ -214,10 +216,16 @@
   width: 40%;
   animation: slideInOut 1s steps(3) infinite;
 }
+.ticket{
+  max-width: 15%;
+  height: auto;
+}
+.ticket:hover{
+  transform: scale(1.05);
+}
 .menubar{
   display: flex;
   flex-direction: row;
-  z-index: 1000;
 }
 
 @media (max-width:800px){
@@ -225,13 +233,19 @@
     display: flex;
     flex-direction: column;
   }
-
   .muñe_home{
     top: 26%;
     width: 80%;
   }
   .logo_home{
     top: 70%;
+  }
+  .tourbar-item{
+    font-size: 20px;
+    flex-direction: column;
+  }
+  .tourbar{
+    padding-top: 5%;
   }
   
 }
